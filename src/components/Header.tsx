@@ -5,7 +5,7 @@ export default function Header() {
     <header className="site-header">
       <div className="container header-inner">
         <Link href="/" className="brand" aria-label="Elizabeth Duffy homepage">
-          <span>ED</span>
+          <img src="/icons/logo.png" alt="Elizabeth Duffy logo" className="brand-logo" />
         </Link>
         <nav aria-label="Primary navigation">
           <Link href="/" className="nav-link active">
