@@ -79,11 +79,11 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 3rem;
-  height: 3rem;
-  border: 1px solid rgba(212, 74, 44, 0.25);
-  border-radius: 999px;
-  background: #fff;
+  width: auto;
+  height: auto;
+  border: none;
+  background: transparent;
+  padding: 0;
 }
 
 .brand-logo {
@@ -106,7 +106,7 @@ nav {
 
 .nav-link:hover,
 .nav-link.active {
-  color: var(--accent);
+  color: #D84130;
   opacity: 1;
 }
 
@@ -124,12 +124,14 @@ main > :nth-last-child(2) {
 .hero-section,
 .about-hero,
 .page-section,
-.instagram-section {
+.instagram-section,
+.contact-hero {
   padding: 4rem 0;
 }
 
 .hero-content,
-.about-hero-grid {
+.about-hero-grid,
+.contact-grid {
   display: grid;
   gap: 2.5rem;
 }
@@ -139,7 +141,8 @@ main > :nth-last-child(2) {
   align-items: stretch;
 }
 
-.hero-copy {
+.hero-copy,
+.contact-copy {
   text-align: left;
   max-width: 42rem;
 }
@@ -168,14 +171,14 @@ main > :nth-last-child(2) {
 }
 
 .about-image-frame {
-  width: min(28rem, 100%);
-  max-width: 32rem;
-  aspect-ratio: 0.9;
+  width: min(419px, 100%);
+  max-width: 419px;
+  aspect-ratio: 419 / 387;
   overflow: hidden;
   position: relative;
-  border-radius: 40% 40% 14% 14% / 48% 48% 22% 22%;
+  border-radius: 40px;
   background: #fff;
-  border: 1px solid var(--accent-soft);
+  border: 1px solid rgba(212, 74, 44, 0.16);
   box-shadow: 0 30px 70px rgba(64, 43, 34, 0.12);
 }
 
@@ -250,10 +253,88 @@ main > :nth-last-child(2) {
   line-height: 1.8;
 }
 
-.hero-copy p {
+.hero-copy p,
+.contact-copy p {
   max-width: 38rem;
   margin: 1.25rem auto 0;
   font-size: 1.03rem;
+}
+
+.contact-grid {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 420px);
+  align-items: start;
+  gap: 3rem;
+}
+
+.contact-copy {
+  max-width: 36rem;
+}
+
+.contact-copy h1 {
+  margin: 0 0 1.5rem;
+  font-size: clamp(3rem, 4vw, 3.75rem);
+  letter-spacing: -0.02em;
+  color: #393F45;
+  font-family: "Sassoon Primary", Georgia, serif;
+}
+
+.contact-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.contact-form label {
+  display: block;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  border: none;
+  border-radius: 999px;
+  background: rgba(245, 238, 230, 0.8);
+  color: #393F45;
+  box-shadow: inset 0 0 0 1px rgba(184, 150, 130, 0.25);
+}
+
+.contact-form textarea {
+  border-radius: 1.5rem;
+  min-height: 14rem;
+  resize: vertical;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  border: none;
+  border-radius: 999px;
+  background: #C39FA4;
+  color: #302A24;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  opacity: 0.95;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .eyebrow {
@@ -379,22 +460,71 @@ main > :nth-last-child(2) {
 
 .about-hero-grid {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: minmax(0, 419px) minmax(0, 1fr);
   align-items: center;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .about-copy {
   text-align: left;
+  max-width: 45rem;
 }
 
 .about-copy h1 {
-  margin: 0;
+  margin: 0 0 1.5rem;
+  font-size: 34px;
+  color: #393F45;
+  font-family: "Sassoon Primary", Georgia, serif;
 }
 
 .about-copy p {
-  margin-top: 1.5rem;
-  max-width: 38rem;
+  margin: 0 0 1.25rem;
+  color: #5f544a;
+  line-height: 1.9;
+}
+
+.about-fun-facts {
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+}
+
+.fun-facts-card {
+  padding: 2rem 2rem 2.5rem;
+  border-radius: 1.5rem;
+  background: #F8F1EE;
+  border: 1px solid rgba(212, 74, 44, 0.18);
+}
+
+.fun-facts-card h2 {
+  margin: 0 0 1.5rem;
+  font-size: 1.3rem;
+  letter-spacing: -0.01em;
+  color: #3b3028;
+}
+
+.fun-facts-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.fun-facts-item {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.fun-facts-item strong {
+  display: block;
+  color: #3b3028;
+  font-weight: 700;
+}
+
+.fun-facts-item p {
+  margin: 0;
+  color: #5f544a;
+  line-height: 1.8;
 }
 
 .site-footer {
@@ -422,6 +552,7 @@ main > :nth-last-child(2) {
 .footer-about p {
   margin: 0;
   max-width: 24rem;
+  font-size: 14px;
 }
 
 .social-link img,
