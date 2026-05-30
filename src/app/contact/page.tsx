@@ -13,6 +13,7 @@ export default function ContactPage() {
             <p>
               I’m actively seeking literary representation and am thrilled to share my portfolio of work with interested agents and editors.
             </p>
+            <p>author.e.duffy at gmail.com</p>
           </div>
 
           <form className="contact-form" action="#" method="post">
