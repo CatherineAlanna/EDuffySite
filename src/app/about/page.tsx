@@ -1,33 +1,41 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import "../../styles/globals.css";
 
 export default function AboutPage() {
   return (
-    <main className="page-shell">
+    <main className="page-shell about-page">
       <Header />
 
-      <section className="page-section">
-        <div className="container">
-          <h1>About E.Duffy</h1>
-          <p>
-            This page introduces your brand and purpose. It is designed to reflect the same polished
-            aesthetic as the homepage while providing room for your story, values, and process.
-          </p>
-          <div className="section-grid">
-            <article className="feature-card">
-              <h3>Who we are</h3>
-              <p>Brand-focused website design with clarity, professionalism, and a memorable user experience.</p>
-            </article>
-            <article className="feature-card">
-              <h3>What we do</h3>
-              <p>Work with clients to create sites that convert and feel delightful on every device.</p>
-            </article>
-            <article className="feature-card">
-              <h3>How we work</h3>
-              <p>A collaborative process that starts with strategy, moves through design, and ends with launch.</p>
-            </article>
+      <section className="about-hero">
+        <div className="container about-hero-grid">
+          <div className="about-image-frame" aria-hidden="true">
+            <img src="/images/about.jpg" alt="Author working with books and notes" />
           </div>
+
+          <div className="about-copy">
+            <p className="eyebrow">Hello there</p>
+            <h1>About Elizabeth Duffy</h1>
+            <p>
+              I write gentle, curious picture books that centre children’s inner lives, quiet family moments, and the joy of discovery. Each story is crafted to feel like a warm invitation for young readers.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="page-section">
+        <div className="container section-grid">
+          <article className="feature-card">
+            <h2>Who I am</h2>
+            <p>Storytelling shaped by lived kindness, a love of nature, and empathy for the small moments that matter.</p>
+          </article>
+          <article className="feature-card">
+            <h2>What I write</h2>
+            <p>Beautifully simple picture books for readers who love gentle humour, emotional honesty, and playful wonder.</p>
+          </article>
+          <article className="feature-card">
+            <h2>Why it matters</h2>
+            <p>Books that help children feel seen, grounded, and excited to explore their own world.</p>
+          </article>
         </div>
       </section>
 

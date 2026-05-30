@@ -8,12 +8,12 @@ const galleryImages = [
     alt: "Notebook and handwriting"
   },
   {
-    src: "https://images.unsplash.com/photo-1520409364224-1be3e019df2b?auto=format&fit=crop&w=900&q=80",
-    alt: "Typing on a yellow typewriter"
+    src: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=900&q=80",
+    alt: "Child drawing on paper"
   },
   {
     src: "https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=900&q=80",
-    alt: "Child drawing on paper"
+    alt: "A child writing at a desk"
   },
   {
     src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80",
