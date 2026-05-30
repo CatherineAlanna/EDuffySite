@@ -3,8 +3,10 @@ export default function HeroSection() {
     <section className="hero-section" aria-labelledby="hero-heading">
       <div className="container hero-content">
         <div className="hero-image-frame" aria-hidden="true">
-          <img src="/images/home.jpg" alt="Elizabeth Duffy in a garden" className="hero-image" />
-          <div className="hero-gradient-overlay" />
+          <div className="hero-image-clip">
+            <img src="/images/home.jpg" alt="Elizabeth Duffy in a garden" className="hero-image" />
+            <div className="hero-gradient-overlay" />
+          </div>
           <h1 id="hero-heading" className="hero-title">Elizabeth Duffy</h1>
         </div>
 
