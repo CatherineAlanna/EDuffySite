@@ -45,7 +45,7 @@ export default function ContactPage() {
               I’m actively seeking literary representation and am thrilled to share my portfolio of work with interested agents and editors.
             </p>
             <p>
-              <a href={`mailto:${RECIPIENT_EMAIL}`}>{RECIPIENT_EMAIL}</a>
+              <a href={`mailto:${RECIPIENT_EMAIL}`}>author.e.duffy at gmail.com</a>
             </p>
           </div>
 

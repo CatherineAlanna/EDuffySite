@@ -59,6 +59,14 @@ body {
   margin: 0 auto;
 }
 
+.contact-page .container {
+  width: 100%;
+  max-width: 1120px;
+  padding-left: 24px;
+  padding-right: 24px;
+  box-sizing: border-box;
+}
+
 .site-header {
   position: sticky;
   top: 0;
@@ -262,6 +270,46 @@ main > :nth-last-child(2) {
   grid-template-columns: minmax(0, 1fr) minmax(0, 420px);
   align-items: start;
   gap: 3rem;
+}
+
+@media (max-width: 720px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contact-copy,
+  .contact-form {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .contact-copy {
+    text-align: left;
+  }
+
+  .contact-copy h1 {
+    margin-bottom: 1rem;
+    font-size: clamp(2.4rem, 8vw, 3rem);
+  }
+
+  .contact-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .contact-form textarea {
+    min-height: 12rem;
+  }
 }
 
 .contact-copy {
