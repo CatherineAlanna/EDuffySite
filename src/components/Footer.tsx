@@ -1,5 +1,8 @@
 import Link from "next/link";
 
+const INSTAGRAM_URL = "https://www.instagram.com/elizabethduffybooks/";
+const EMAIL_ADDRESS = "author.e.duffy@gmail.com";
+
 export default function Footer() {
   return (
     <footer className="site-footer">
@@ -23,10 +26,10 @@ export default function Footer() {
         <div className="footer-connect">
           <p>Connect</p>
           <div className="social-actions">
-            <a href="https://instagram.com" className="social-link" aria-label="Instagram">
+            <a href={INSTAGRAM_URL} className="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
               <img src="/icons/instagram-icon.png" alt="Instagram" className="footer-icon" />
             </a>
-            <a href="mailto:hello@example.com" className="social-link" aria-label="Email">
+            <a href={`mailto:${EMAIL_ADDRESS}`} className="social-link" aria-label="Email">
               <img src="/icons/email-icon.png" alt="Email" className="footer-icon" />
             </a>
           </div>
